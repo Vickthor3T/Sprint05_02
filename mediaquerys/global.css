@@ -1,0 +1,284 @@
+/* Estilos globales */
+.page {
+  font-family: Arial, sans-serif;
+}
+
+/* Ejemplo 1: Min-width */
+/* Explicación: Si la pantalla es más ancha que 600px, cambia el color del texto a azul */
+.example1 .content__text {
+  color: black;
+}
+
+@media screen and (min-width: 600px) {
+  .example1 .content__text {
+    color: blue;
+  }
+}
+
+
+/* Ejemplo 2: Max-width */
+/* Explicación: Si la pantalla es más angosta que 600px, cambia el color del texto a rojo */
+.example2 .content__text {
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .example2 .content__text {
+    color: red;
+  }
+}
+
+
+/* Ejemplo 3: Orientation */
+/* Explicación: Si el dispositivo está en orientación vertical, cambia el texto a verde; si es horizontal, a naranja */
+.example3 .content__text {
+  color: black;
+}
+
+@media screen and (orientation: portrait) {
+  .example3 .content__text {
+    color: green;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .example3 .content__text {
+    color: orange;
+  }
+}
+
+
+/* Ejemplo 4: Aspect Ratio */
+/* Explicación: Si la relación de aspecto es 16:9 (como una pantalla de cine), el texto será púrpura */
+.example4 .content__text {
+  color: black;
+}
+
+@media screen and (aspect-ratio: 16/9) {
+  .example4 .content__text {
+    color: purple;
+  }
+}
+
+
+/* Ejemplo 5: Hover Capability */
+/* Explicación: Si el dispositivo tiene soporte para hover (como cuando mueves el mouse sobre algo), el texto cambia a cian */
+.example5 .content__text {
+  color: black;
+}
+
+@media (hover: hover) {
+  .example5 .content__text {
+    color: cyan;
+  }
+}
+
+
+/* Ejemplo 6: Prefers Reduced Motion */
+/* Explicación: Si el usuario prefiere menos movimiento en la interfaz, desactivamos la animación */
+.example6 .content__text {
+  transition: transform 2s ease;
+  transform: rotate(360deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .example6 .content__text {
+    transition: none;
+    transform: none;
+  }
+}
+
+
+/* Ejemplo 7: Prefers Color Scheme */
+/* Explicación: Si el usuario usa un tema oscuro, el fondo será negro y el texto blanco. En un tema claro, el fondo será blanco y el texto negro */
+.example7 .content__text {
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .example7 .content__text {
+    color: white;
+    background-color: black;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .example7 .content__text {
+    color: black;
+    background-color: white;
+  }
+}
+
+
+/* Ejemplo 8: Uso de 'and' */
+/* Explicación: Aquí usamos 'and' para combinar dos condiciones: la pantalla debe tener al menos 600px de ancho y estar en orientación horizontal para que el texto sea verde claro */
+.example8 .content__text {
+  color: black;
+}
+
+@media screen and (min-width: 600px) and (orientation: landscape) {
+  .example8 .content__text {
+    color: lightgreen;
+  }
+}
+
+
+/* Ejemplo 9: Uso de 'only' */
+/* Explicación: Usamos 'only' para aplicar esta regla solo a dispositivos con pantalla de máximo 600px de ancho. El texto será coral claro */
+.example9 .content__text {
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .example9 .content__text {
+    color: lightcoral;
+  }
+}
+
+
+/* Ejemplo 10: Uso de 'not' */
+/* Explicación: Aquí usamos 'not' para excluir las pantallas más anchas de 800px. El texto se pondrá rojo oscuro solo en pantallas más pequeñas */
+.example10 .content__text {
+  color: black;
+}
+
+@media not screen and (min-width: 800px) {
+  .example10 .content__text {
+    color: darkred;
+  }
+}
+
+
+/* Ejemplo 11: Uso de 'and' con min-height */
+/* Explicación: El texto se vuelve azul y aumenta el tamaño si la pantalla tiene al menos 600px de ancho y 400px de alto */
+.example11 .content__text {
+  color: black;
+}
+
+@media screen and (min-width: 600px) and (min-height: 400px) {
+  .example11 .content__text {
+    color: blue;
+    font-size: 18px;
+  }
+}
+
+
+/* Ejemplo 12: Uso de 'only' y 'and' combinados */
+/* Explicación: Solo en pantallas con un mínimo de 800px de ancho y en orientación horizontal, el texto será color teal */
+.example12 .content__text {
+  color: black;
+}
+
+@media only screen and (min-width: 800px) and (orientation: landscape) {
+  .example12 .content__text {
+    color: teal;
+  }
+}
+
+
+/* Ejemplo 13: Uso de 'not' con max-height */
+/* Explicación: Si la pantalla no es más alta de 600px, el texto cambiará a azul oscuro */
+.example13 .content__text {
+  color: black;
+}
+
+@media not screen and (max-height: 600px) {
+  .example13 .content__text {
+    color: darkblue;
+  }
+}
+
+
+/* Ejemplo 14: Múltiples media queries (min-width y hover) */
+/* Explicación: Si la pantalla tiene al menos 700px de ancho y soporta hover, el texto se pondrá verde con fondo amarillo */
+.example14 .content__text {
+  color: black;
+}
+
+@media screen and (min-width: 700px) and (hover: hover) {
+  .example14 .content__text {
+    color: green;
+    background-color: yellow;
+  }
+}
+
+
+/* Ejemplo 15: Aspect-ratio y min-width */
+/* Explicación: Si la pantalla es ancha (al menos 1024px) y tiene una relación de aspecto de 16:9, el texto será púrpura */
+.example15 .content__text {
+  color: black;
+}
+
+@media screen and (min-width: 1024px) and (aspect-ratio: 16/9) {
+  .example15 .content__text {
+    color: purple;
+  }
+}
+
+
+/* Ejemplo 16: Orientation y prefers-color-scheme */
+/* Explicación: Si el dispositivo está en orientación vertical y el usuario prefiere un tema oscuro, el fondo será negro y el texto blanco */
+.example16 .content__text {
+  color: black;
+}
+
+@media screen and (orientation: portrait) and (prefers-color-scheme: dark) {
+  .example16 .content__text {
+    color: white;
+    background-color: black;
+  }
+}
+
+
+/* Ejemplo 17: Min-width, hover y aspect-ratio */
+/* Explicación: Si la pantalla es de al menos 1200px de ancho, soporta hover y tiene una relación de aspecto 4:3, el texto será naranja */
+.example17 .content__text {
+  color: black;
+}
+
+@media screen and (min-width: 1200px) and (hover: hover) and (aspect-ratio: 4/3) {
+  .example17 .content__text {
+    color: orange;
+  }
+}
+
+
+/* Ejemplo 18: Min-width y max-height */
+/* Explicación: Si la pantalla tiene al menos 800px de ancho y no es más alta de 500px, el texto será color carmesí con fondo amarillo claro */
+.example18 .content__text {
+  color: black;
+}
+
+@media screen and (min-width: 800px) and (max-height: 500px) {
+  .example18 .content__text {
+    color: crimson;
+    background-color: lightyellow;
+  }
+}
+
+
+/* Ejemplo 19: Prefers-reduced-motion y orientación */
+/* Explicación: Si el usuario prefiere menos movimiento y la pantalla está en orientación horizontal, el texto será verde oscuro */
+.example19 .content__text {
+  color: black;
+}
+
+@media screen and (prefers-reduced-motion: reduce) and (orientation: landscape) {
+  .example19 .content__text {
+    color: darkgreen;
+  }
+}
+
+
+/* Ejemplo 20: Combinación de max-width, hover y prefers-color-scheme */
+/* Explicación: Si la pantalla es de máximo 500px, soporta hover y el esquema de color preferido es claro, el texto será rosa con fondo negro */
+.example20 .content__text {
+  color: black;
+}
+
+@media screen and (max-width: 500px) and (hover: hover) and (prefers-color-scheme: light) {
+  .example20 .content__text {
+    color: pink;
+    background-color: black;
+  }
+}

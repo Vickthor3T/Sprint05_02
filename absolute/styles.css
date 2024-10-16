@@ -1,0 +1,46 @@
+/* Bloque principal: layout */
+.layout {
+    width: 100%;
+    background-color: antiquewhite;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Elemento section con modificadores */
+.layout__section {
+    width: 100%;
+    position: relative;
+}
+
+.layout__section--primary {
+    background-color: aqua;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.layout__section--secondary {
+    background-color: aqua;
+    height: 200px;
+}
+
+/* Elemento container */
+.layout__container {
+    width: 50%;
+    background-color: red;
+}
+
+/* Elemento box con modificador absoluto */
+.layout__box {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+}
+
+.layout__box--absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

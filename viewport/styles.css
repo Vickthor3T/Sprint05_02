@@ -1,0 +1,41 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Bloque grid */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Elemento box */
+.grid__box {
+    width: 10vw; /* 10% del ancho del viewport */
+    height: 10vh; /* 10% del alto del viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+    border: 1px solid white;
+    box-sizing: border-box;
+    color: white;
+    font-size: 1em;
+}
+
+
+
+
+
+
+
+/* Media query para dispositivos con resolución máxima de 1080px de ancho */
+@media (max-width_: 1080px) {
+    .grid__box {
+        width: 9.6vw; /* Ajustamos ligeramente el ancho */
+        height: 9.6vh; /* Ajustamos ligeramente el alto */
+        font-size: 0.8em; /* Reducimos el tamaño de fuente en dispositivos pequeños */
+    }
+}
