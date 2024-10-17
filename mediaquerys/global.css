@@ -149,18 +149,53 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* Ejemplo 11: Uso de 'and' con min-height */
 /* Explicación: El texto se vuelve azul y aumenta el tamaño si la pantalla tiene al menos 600px de ancho y 400px de alto */
 .example11 .content__text {
   color: black;
 }
 
-@media screen and (min-width: 600px) and (min-height: 400px) {
+
+@media screen and (min-width: 800px) and (min-height: 601px) {
   .example11 .content__text {
     color: blue;
     font-size: 18px;
   }
 }
+
+
+
+@media screen and (min-width: 1200) and (min-height: 1000px) {
+  .example11 .content__text {
+    color: red;
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Ejemplo 12: Uso de 'only' y 'and' combinados */
@@ -176,6 +211,17 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* Ejemplo 13: Uso de 'not' con max-height */
 /* Explicación: Si la pantalla no es más alta de 600px, el texto cambiará a azul oscuro */
 .example13 .content__text {
@@ -184,9 +230,23 @@
 
 @media not screen and (max-height: 600px) {
   .example13 .content__text {
-    color: darkblue;
+    color: red;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Ejemplo 14: Múltiples media queries (min-width y hover) */

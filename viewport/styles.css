@@ -27,12 +27,8 @@ body {
 
 
 
-
-
-
-
 /* Media query para dispositivos con resolución máxima de 1080px de ancho */
-@media (max-width_: 1080px) {
+@media (max-width: 1080px) {
     .grid__box {
         width: 9.6vw; /* Ajustamos ligeramente el ancho */
         height: 9.6vh; /* Ajustamos ligeramente el alto */
